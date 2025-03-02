@@ -1,0 +1,16 @@
+td > .bi-pencil-fill {
+    cursor: pointer;
+
+    &:hover {
+        color: green;
+    }
+}
+
+td > .bi-trash-fill {
+    cursor: pointer;
+
+    &:hover {
+        color: red;
+    }
+}
+
