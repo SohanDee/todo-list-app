@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>ToDo List</title>
     <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="./src/css/style.css">
     <script type="module" src="./src/js/main.js"></script>
 </head>
 <body>
+<div id="night-mode" class="d-flex mt-3 mx-3 gap-2 justify-content-end">
+    <i class="bi bi-brightness-high-fill"></i>
+    <div class="form-check form-switch gap-2">
+        <input class="form-check-input" type="checkbox" role="switch">
+        <i class="bi bi-moon-fill"></i>
+    </div>
+</div>
 <div class="container">
-    <h1 class="display-1 text-center my-5 fw-bold">To-Do List</h1>
+    <h1 class="display-1 text-center fw-bold">To-Do List</h1>
     <form id="add-task" class="mb-5">
         <label for="task-input" class="form-label">Enter a task</label>
         <div class="input-group mb-3">
@@ -22,16 +29,31 @@
     </form>
     <h3 class="my-3">To-Do List</h3>
     <hr>
-    <table id="todo-table" class="table table-hover">
+    <table id="todo-table" class="table table-hover mb-lg-5">
         <tbody>
         <tr class="align-middle">
             <td class="w-10">
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault"></label>
+                    <input class="form-check-input" type="checkbox">
                 </div>
             </td>
-            <td class="w-70">task</td>
+            <td class="w-70 fs-4">Task 1</td>
+            <td class="w-10 text-center"><i class="bi bi-pencil-fill fs-4"></i></td>
+            <td class="w-10 text-center"><i class="bi bi-trash-fill fs-4"></i></td>
+        </tr>
+        </tbody>
+    </table>
+    <h3 class="my-3">Done List</h3>
+    <hr>
+    <table id="done-table" class="table table-hover">
+        <tbody>
+        <tr class="align-middle">
+            <td class="w-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox">
+                </div>
+            </td>
+            <td class="w-70 fs-4">Task 2</td>
             <td class="w-10 text-center"><i class="bi bi-pencil-fill fs-4"></i></td>
             <td class="w-10 text-center"><i class="bi bi-trash-fill fs-4"></i></td>
         </tr>
